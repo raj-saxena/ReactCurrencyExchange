@@ -1,0 +1,1 @@
+export const FETCH_EXCHANGE = 'fetch_exchange';
