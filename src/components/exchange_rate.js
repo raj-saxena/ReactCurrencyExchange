@@ -20,6 +20,7 @@ class ExchangeRate extends Component {
 }
 
   render() {
+    // console.log('fetchExchangeRate');
     return (
       <div>
         <div>
