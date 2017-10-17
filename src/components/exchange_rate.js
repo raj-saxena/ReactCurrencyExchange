@@ -5,8 +5,8 @@ import * as actions from '../actions';
 
 class ExchangeRate extends Component {
   componentDidMount() {
-    console.log(this.props.fetchExchangeRate());
-		// this.props.fetchExchangeRate();
+    // console.log(this.props.fetchExchangeRate());
+		this.props.fetchExchangeRate();
   }
   
   renderRates() {
