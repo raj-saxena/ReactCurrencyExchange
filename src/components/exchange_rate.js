@@ -5,22 +5,27 @@ import * as actions from '../actions';
 
 class ExchangeRate extends Component {
   componentDidMount() {
-    // console.log(this.props.fetchExchangeRate());
-		this.props.fetchExchangeRate();
+    this.props.fetchExchangeRate();
   }
   
   renderRates() {
-    return _.map(this.props.rates, rate => {
-      return (
-      <li className="list-group-item" key={rate.symbols}>
-        {rate.value}
-      </li>
-    );
-  });
-}
+    const rates = this.props.rates[0];
+      if(!rates) {
+        return 'Fetching data';
+      }
+      
+      console.log('rates', rates.rates);
+      return _.map(rates.rates, (key, value) => {
+        console.log(key + "->" + value);
+        return (
+        <li className="list-group-item" key={key}>
+          {key}  {value}
+        </li>
+      );
+    });
+  }
 
   render() {
-    // console.log('fetchExchangeRate');
     return (
       <div>
         <div>
