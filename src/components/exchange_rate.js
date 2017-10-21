@@ -19,7 +19,7 @@ class ExchangeRate extends Component {
         console.log(key + "->" + value);
         return (
         <li className="list-group-item" key={key}>
-          {key}  {value}
+          {key} {value}
         </li>
       );
     });
